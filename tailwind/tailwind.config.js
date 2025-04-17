@@ -35,7 +35,7 @@ module.exports = {
 				   '100%': {opacity:1, transform:'translateY(0)'} },
 	  },
 	  backgroundImage: {
-		'gradient-warm': 'linear-gradient(90deg, #ffffff, #f0eeee)',
+		'gradient-warm-x': 'linear-gradient(90deg, #ffffff, #f0eeee)', // horizontal only
 	  },
 	},
   },
