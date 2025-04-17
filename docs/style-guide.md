@@ -277,7 +277,7 @@ src/
 
 ---
 ## 7. Integrations
-**Lovable:** [Lovable](docs/lovable‑integration.md)
+**Lovable:** [Lovable](lovable.md)
 
 
 ---
