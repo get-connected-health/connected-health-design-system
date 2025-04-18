@@ -228,10 +228,7 @@ Input, checkbox, radio examples as per original spec using brand colors (`focus:
 </div>
 ```
 
-### 4.4 Navigation Elements
-Header & footer gradient warm backgrounds; centered typography hierarchy.
-
-### 4.5 Call‑to‑Action Sections
+### 4.4 Call‑to‑Action Sections
 Simple CTA and two‑column CTA patterns with `.btn-primary` links.
 
 ---
