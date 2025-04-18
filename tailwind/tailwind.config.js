@@ -58,7 +58,7 @@ module.exports = {
        *  Horizontal warm stripe only.
        */
       backgroundImage: {
-        "gradient-warm-x": "linear-gradient(90deg, #ffffff, #f0eeee)",
+        "gradient-warm-x": "linear-gradient(90deg, #ffffff 0%, #f0eeee 100%)",
       },
     },
   },
