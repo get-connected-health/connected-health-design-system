@@ -43,7 +43,8 @@ Lovable works best with clear, role‑scoped prompts that tackle **one task at a
 #### Guard‑rail examples
 - Do **not** change the public API of existing components.
 - Keep bundle‑size delta under **2 KB**.
-– The root <nav> must keep `bg-white`; do not apply gradient utilities to it.
+- The top bar must use <header class="site-header bg-white"> containing one <nav>.  
+  Do **not** apply gradients or additional background utilities to either element.
 - Section backgrounds may use **only** these utilities  
   `bg-white`, `bg-warm-50`, or `bg-gradient-warm-x` (horizontal).
 - **Never** combine `bg-gradient-warm-x` with `bg-gradient-to-*`, `from-*`, or `to-*`.
