@@ -43,9 +43,11 @@ Lovable works best with clear, role‑scoped prompts that tackle **one task at a
 #### Guard‑rail examples
 - Do **not** change the public API of existing components.
 - Keep bundle‑size delta under **2 KB**.
-- Use bg-gradient-warm-x for section backgrounds.
-- Do not add bg-gradient-to-*, from-*, or to-* utilities alongside it.
 – The root <nav> must keep `bg-white`; do not apply gradient utilities to it.
+- Section backgrounds may use **only** these utilities  
+  `bg-white`, `bg-warm-50`, or `bg-gradient-warm-x` (horizontal).
+- **Never** combine `bg-gradient-warm-x` with `bg-gradient-to-*`, `from-*`, or `to-*`.
+
 
 Place guard‑rails at the end of the prompt so they are top‑of‑mind when the AI plans the diff.
 
