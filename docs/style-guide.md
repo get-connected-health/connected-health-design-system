@@ -128,6 +128,7 @@ Connected Health’s visual language balances calm professionalism with energi
 
 | Token    | Hex       |
 | -------- | --------- |
+| warm‑10  | `#F0EEEE` |
 | warm‑50  | `#F7F6F6` |
 | warm‑100 | `#E0DCDC` |
 | warm‑200 | `#C1B9B9` |
