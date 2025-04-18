@@ -7,7 +7,7 @@
 
 @layer utilities {
   .bg-gradient-warm-x {
-    background-image: linear-gradient(90deg, #ffffff, #f0eeee) !important;
+    background-image: linear-gradient(90deg, #ffffff 0%, #f0eeee 100%) !important;
   }
 }
 
