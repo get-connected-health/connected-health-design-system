@@ -45,10 +45,9 @@ Lovable works best with clear, role‑scoped prompts that tackle **one task at a
 - Keep bundle‑size delta under **2 KB**.
 - The top bar must use <header class="site-header bg-white"> containing one <nav>.  
   Do **not** apply gradients or additional background utilities to either element.
-- Section backgrounds may use **only** these utilities  
-  `bg-white`, `bg-warm-50`, or `bg-gradient-warm-x` (horizontal).
+- Section backgrounds may use **only** these utilities: 
+  `bg-gradient-warm-x`, `bg-white`, `bg-warm-10`, or `bg-warm-50`.
 - **Never** combine `bg-gradient-warm-x` with `bg-gradient-to-*`, `from-*`, or `to-*`.
-
 
 Place guard‑rails at the end of the prompt so they are top‑of‑mind when the AI plans the diff.
 
