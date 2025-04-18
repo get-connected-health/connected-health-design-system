@@ -117,32 +117,32 @@ Connected Health’s visual language balances calm professionalism with energi
 
 #### Primary Colors
 
-|Color|Hex|RGB|HSL|Tailwind Token|
-|---|---|---|---|---|
-|Primary Blue|#2B8FBB|43 , 143 , 187|198° 63 % 47 %|`ch-blue`|
-|Green|#64AC00|100 , 172 , 0|83° 100 % 34 %|`ch-green`|
-|Brown|#827272|130 , 114 , 114|0° 7 % 51 %|`warm-400`|
-|Dark Gray|#353B36|53 , 59 , 54|125° 5 % 23 %|`dark-gray`|
+| Color        | Hex       | RGB             | HSL            | Tailwind Token |
+| ------------ | --------- | --------------- | -------------- | -------------- |
+| Primary Blue | `#2B8FBB` | 43 , 143 , 187  | 198° 63 % 47 % | `ch-blue`      |
+| Green        | `#64AC00` | 100 , 172 , 0   | 83° 100 % 34 % | `ch-green`     |
+| Brown        | `#827272` | 130 , 114 , 114 | 0° 7 % 51 %    | `warm-400`     |
+| Dark Gray    | `#353B36` | 53 , 59 , 54    | 125° 5 % 23 %  | `dark-gray`    |
 
 #### Warm Scale
 
-|Token|Hex|
-|---|---|
-|warm‑50|#F7F6F6|
-|warm‑100|#E0DCDC|
-|warm‑200|#C1B9B9|
-|warm‑300|#A39696|
-|warm‑400|#827272|
-|warm‑500|#6B5E5E|
-|warm‑600|#534A4A|
-|warm‑700|#3B3435|
+| Token    | Hex       |
+| -------- | --------- |
+| warm‑50  | `#F7F6F6` |
+| warm‑100 | `#E0DCDC` |
+| warm‑200 | `#C1B9B9` |
+| warm‑300 | `#A39696` |
+| warm‑400 | `#827272` |
+| warm‑500 | `#6B5E5E` |
+| warm‑600 | `#534A4A` |
+| warm‑700 | `#3B3435` |
 
 #### Alpha Variations
 
-|Token|Example Usage|
-|---|---|
-|`bg-ch-blue/10`|10 % blue tint for info boxes|
-|`bg-warm-100/50`|50 % warm‑100 tint for soft dividers|
+| Token            | Example Usage                        |
+| ---------------- | ------------------------------------ |
+| `bg-ch-blue/10`  | 10 % blue tint for info boxes        |
+| `bg-warm-100/50` | 50 % warm‑100 tint for soft dividers |
 
 ### 2.2 Typography
 
@@ -188,7 +188,7 @@ _File naming: `ch-logo-[variant].[format]` (`@2x` for high‑dpi PNGs)._
 Lucide icons at `h-7 w-7` for features, `h-4 w-4` in lists. Use brand blue (`text-ch-blue`) or contextual colours (`text-green-600`, `text-red-500`).
 
 ### 3.4 Background Elements
-- `bg-gradient-warm` for section backgrounds (defined in Tailwind).
+- Section backgrounds should alternate between `gradient-warm-x` (defined in Tailwind) and a flat background color: (`#ffffff` || `#f0eeee` || `#F7F6F6` )
 - `bg-warm-100/50 h-px w-full` for subtle dividers.
 - Step number pill: `inline-block bg-ch-blue text-white rounded-full px-4 py-1 text-sm font-bold`.
 
@@ -274,10 +274,11 @@ src/
 
 ---
 ## 7. Integrations
-**Lovable:** [Lovable](lovable.md)
+**Lovable:** [Lovable Integration Guide](docs/lovable‑integration.md)
 
 
 ---
 
 ## 8. Changelog
 - **2025‑04‑11** – Initial full style guide consolidated into GitHub‑linked document.
+- 2025-04-18 – Fixes to typography and background colors/gradients
