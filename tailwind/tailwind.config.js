@@ -1,43 +1,73 @@
-/** @type {import('tailwindcss').Config} */
+/**  tailwind/tailwind.config.js
+ *   Connected Health design‑system
+ *   Last updated 2025‑04‑18
+ */
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
+  /** ----------------------------------------------------------------
+   *  1. Template paths — add/adjust as you add pages or move files
+   *  ---------------------------------------------------------------- */
   content: [
-	'./pages/**/*.{js,ts,jsx,tsx}',
-	'./components/**/*.{js,ts,jsx,tsx}',
+    "./src/**/*.{js,jsx,ts,tsx,mdx}",
+    "./pages/**/*.{js,jsx,ts,tsx,mdx}",
+    "./components/**/*.{js,jsx,ts,tsx,mdx}",
   ],
-  theme: {
-	extend: {
-	  colors: {
-		'ch-blue': '#2B8FBB',
-		'ch-green': '#64AC00',
-		'dark-gray': '#353B36',
-		warm: {
-		  50:  '#F7F6F6',
-		  100: '#E0DCDC',
-		  200: '#C1B9B9',
-		  300: '#A39696',
-		  400: '#827272',
-		  500: '#6B5E5E',
-		  600: '#534A4A',
-		  700: '#3B3435',
-		},
-	  },
-	  fontFamily: {
-		sans: ['Roboto', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-		serif: ['caecilia', 'Roboto Slab', 'ui-serif', 'Georgia', 'serif'],
-	  },
-	  animation: {
-		'fade-in': 'fadeIn 1s ease-out',
-		'fade-in-up': 'fadeInUp 0.9s cubic-bezier(0.25,0.46,0.45,0.94) forwards',
-	  },
-	  keyframes: {
-		fadeIn:   { '0%': {opacity:0}, '100%': {opacity:1} },
-		fadeInUp: { '0%': {opacity:0, transform:'translateY(30px)'},
-				   '100%': {opacity:1, transform:'translateY(0)'} },
-	  },
-	  backgroundImage: {
-		'gradient-warm-x': 'linear-gradient(90deg, #ffffff, #f0eeee)', // horizontal only
-	  },
-	},
+
+  /** ----------------------------------------------------------------
+   *  2. Core‑plugin overrides
+   *     – Strip out Tailwind’s generic gradient helpers so the
+   *       AI can’t pick vertical gradients.
+   *  ---------------------------------------------------------------- */
+  corePlugins: {
+    backgroundImage: false,      // nukes bg-gradient-to-*
+    gradientColorStops: false,   // nukes from-*, via-*, to-*
   },
-  plugins: [],
+
+  /** ----------------------------------------------------------------
+   *  3. Design‑token extensions (colours, fonts, spacing, etc.)
+   *  ---------------------------------------------------------------- */
+  theme: {
+    extend: {
+      /** 3.1  Custom colour palette
+       *  These tokens line up with the Style Guide § 2.1
+       */
+      colors: {
+        "ch-blue":  "#2B8FBB",
+        "ch-green": "#64AC00",
+        "warm-50":  "#F7F6F6",
+        "warm-100": "#E0DCDC",
+        "warm-200": "#C1B9B9",
+        "warm-300": "#A39696",
+        "warm-400": "#827272",
+        "warm-500": "#6B5E5E",
+        "warm-600": "#534A4A",
+        "warm-700": "#3B3435",
+        "dark-gray": "#353B36",
+      },
+
+      /** 3.2  Typography
+       *  Keep the same serif/sans families as before
+       */
+      fontFamily: {
+        sans: ["Roboto", ...defaultTheme.fontFamily.sans],
+        serif: ["Caecilia", "Roboto Slab", ...defaultTheme.fontFamily.serif],
+      },
+
+      /** 3.3  Custom background images
+       *  Horizontal warm stripe only.
+       */
+      backgroundImage: {
+        "gradient-warm-x": "linear-gradient(90deg, #ffffff, #f0eeee)",
+      },
+    },
+  },
+
+  /** ----------------------------------------------------------------
+   *  4. Plugins — keep any you already rely on here
+   *  ---------------------------------------------------------------- */
+  plugins: [
+    // require("@tailwindcss/forms"),
+    // require("@tailwindcss/typography"),
+  ],
 };
